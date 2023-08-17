@@ -1,0 +1,793 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Logistica - Shipping Company Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <!-- {% comment %} <link href="{% static 'img/favicon.ico' %}" rel="icon"> {% endcomment %} -->
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<style>
+    .dropshadow {
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    }
+</style>
+<body>
+    <!-- Spinner Start -->
+    <div style="color: #FF3E41;" id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-success" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-success navbar-light shadow border-top border-5 border-success sticky-top p-0 ">
+        <a href="index.html" class="navbar-brand bg-success d-flex align-items-center px-4 px-lg-5">
+            {% comment %} <img src="{% static 'img/logo.png' %}" alt=""> {% endcomment %}
+            <h2 class="mb-2 text-white" style="font-family:'Times New Roman', Times, serif; font-weight: normal;">Grupo Giraud</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4 bg-white" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{{inicio}}" class="nav-item nav-link active">Inicio</a>
+                <a href="#scrollspyHeading1" class="nav-item nav-link">El grupo</a>
+                <a href="#scrollspyHeading2" class="nav-item nav-link">Servicios</a>
+                <a href="#scrollspyHeading3" class="nav-item nav-link">Clientes</a>
+                {% comment %} <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                        <a href="feature.html" class="dropdown-item">Features</a>
+                        <a href="quote.html" class="dropdown-item">Free Quote</a>
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div> {% endcomment %}
+                <a href="#scrollspyHeading4" class="nav-item nav-link">Contáctenos</a>
+            </div>
+            {% comment %} <h4 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-headphones text-success me-3"></i>+012 345 6789</h4> {% endcomment %}
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div id="carouselExampleAutoplaying" class="owl-carousel header-carousel position-relative mb-5">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/carousel-1.jpg' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Solución de transporte y logística</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Mas de 60 años de experiencia como <span class="text-warning">Operador Logistico</span></h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2"> Una trayectoria de más de 60 años como destacado operador en el mundo de la logística y el transporte, brindando soluciones eficientes y confiables para satisfacer las demandas cambiantes del mercado global.</p>
+                                {% comment %} <a href="" class="btn btn-success py-md-3 px-md-5 me-3 animated slideInLeft">Obtener Información</a> {% endcomment %}
+                                {% comment %} <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Solución a tramites de Aduanas</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Un protafolio completo de servicios para <span class="text-warning">Importación y Exportación</span></h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Nuestro Portafolio Integral de Servicios para Importación y Exportación. Desde asesoramiento experto hasta gestión eficiente de trámites aduaneros, ofrecemos una solución completa para tus necesidades de comercio internacional, asegurando un flujo sin problemas en la cadena de suministro global.</p>
+                                {% comment %} <a href="" class="btn btn-success py-md-3 px-md-5 me-3 animated slideInLeft">Obtener Información</a> {% endcomment %}
+                                {% comment %} <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div id="scrollspyHeading1" class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container about py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100 shadow-lg" src="{% static 'img/about.jpg' %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="text-secondary text-uppercase mb-3">Presentación</h6>
+                    <h1 class="mb-5">Bienvenido al sitio web de Grupo Giraud</h1>
+                    <p class="mb-5">Somos un Grupo Empresarial con una trayectoria de más de 60 años dedicados a ayudar a empresas de todo tipo, a realizar sus operaciones de Importación y Exportación en todas y cada una de sus fases de la manera más eficiente y segura posible.</p>
+                    <p class="mb-5">Contamos con una plantilla de más de 140 profesionales dedicados a brindar conocimientos, experiencia, la mejor atención y servicio, los cuales diseñan, planifican, desarrollan y controlan estrategias que hacen que nuestros Clientes se sientan acompañados por un socio estratégico especializado.</p>
+                    <div class="row g-4 mb-5">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <i class="fa fa-globe fa-3x text-warning mb-3 dropshadow"></i>
+                            <h5>Agentes de Aduana</h5>
+                            <p class="m-0">Le acompañamos a lo largo de todo su proceso de Importación/Exportación. Contamos con personal calificado capaz de resolver sus problemas.</p>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                            <i class="fa fa-shipping-fast fa-3x text-warning mb-3 dropshadow"></i>
+                            <h5>Transporte Terrestre</h5>
+                            <p class="m-0">Contamos con una flota propia de transporte para movilizar su carga a nivel nacional, monitoreada y controlada en todo momento por sistemas de GPS y geolocalización.</p>
+                        </div>
+                    </div>
+                    {% comment %} <a href="" class="btn btn-success py-3 px-5">Explore More</a> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Fact Start -->
+    <div class="container-xxl py-5 bg-success" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">ALGUNOS HECHOS</h6>
+                    <h1 class="mb-5 text-white">Nuestra misión es ayudar a nuestros <span class="text-warning">Clientes a movilizar sus cargas de manera eficiente y segura</span></h1>
+                    <div class="d-flex align-items-center">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-sm-6">
+                            <div class="bg-light p-4 mb-4 wow fadeIn" data-wow-delay="0.3s" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;">
+                                <i class="fa fa-users fa-2x text-dark mb-3 dropshadow" ></i>
+                                <h2 class=" mb-2 dropshadow" data-toggle="counter-up">1234</h2>
+                                <p class=" mb-0 dropshadow">Clientes Satisfechos</p>
+                            </div>
+                            <div class="bg-light p-4 wow fadeIn" data-wow-delay="0.5s" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;">
+                                <i class="fa fa-ship fa-2x text-dark mb-3 dropshadow"></i>
+                                <h2 class=" mb-2 dropshadow" data-toggle="counter-up">1234</h2>
+                                <p class=" mb-0 dropshadow" >Envios Completados</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-light p-4 wow fadeIn" data-wow-delay="0.7s" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;">
+                                <i class="fa fa-star fa-2x text-dark mb-3 dropshadow"></i>
+                                <h2 class=" mb-2 dropshadow" data-toggle="counter-up">1234</h2>
+                                <p class=" mb-0 dropshadow">Reseñas de Clientes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fact End -->
+
+
+    <!-- Service Start -->
+    <div id="scrollspyHeading2" class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Nuestros Servicios</h6>
+                <h1 class="mb-5">Explore Nuestros Servicios</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="{% static 'img/service-1.jpg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Agentes de Aduana</h4>
+                        <p>Le acompañamos a lo largo de todo su proceso de Importación/Exportación. Contamos con personal calificado capaz de resolver sus problemas.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Obtener Información</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="{% static 'img/service-2.jpg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Agentes de Carga</h4>
+                        <p>Nos encargamos de movilizar su carga esté donde esté, transportándola y gestionando todos los permisos y documentación que se requieran para que llegue segura a su destino.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Obtener Información</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="{% static 'img/service-3.jpg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Almacenes y Depósitos</h4>
+                        <p>Le ofrecemos espacios para el resguardo temporal y permanente de su mercancía de forma segura, monitoreados 24 horas al día por sistemas de seguridad y videovigilancia (CCTV).</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Obtener Información</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="{% static 'img/service-4.jpg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Transporte Terrestre</h4>
+                        <p>Contamos con una flota propia de transporte para movilizar su carga a nivel nacional, monitoreada y controlada en todo momento por sistemas de GPS y geolocalización.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Obtener Información</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="{% static 'img/service-5.jpg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Seguros de Carga</h4>
+                        <p>Le ofrecemos pólizas y fianzas para que pueda dormir tranquilo. Contamos con el respaldo de las más grandes y prestigiosas aseguradoras del sector a nivel mundial.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Obtener Información</span></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="{% static 'img/service-6.jpg' %}" alt="">
+                        </div>
+                        <h4 class="mb-3">Proyectos y Asesoría</h4>
+                        <p>Le ofrecemos Asesoría especializada para sus proyectos logísticos. Si tiene una idea en mente y necesita ayuda para convertirla en realidad, nosotros somos su mejor opción.</p>
+                        <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span>Obtener Información</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0 bg-success shadow-lg">
+        <div class="container feature py-5 px-lg-0">
+            <div class="row">
+                <div class="col feature-text wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">Lo que nos caracteriza</h6>
+                    <h1 class="mb-5 text-warning">¿ Qué le ofrecemos ?</h1>
+                    <div class="container text-center">
+                        <div class="row justify-content-center ">
+
+                          <div class="col-xl-3 col-lg-4">
+                            <div class="d-flex mb-5 wow fadeInUp square" data-wow-delay="0.1s">
+                                <i class="fa fa-solid fa-handshake text-dark fa-3x flex-shrink-0"></i>
+                                <div class="ms-4">
+                                    <h6 class="text-dark text-sm">Servicio de primera</h6>
+                                    <p class="mb-0 text-dark little-text">Un equipo con ganas de atenderle y ayudarle</p>
+                                </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-xl-3 col-lg-4">
+                            <div class="d-flex mb-5 wow fadeInUp square" data-wow-delay="0.2s">
+                                <i class="fa fa-solid fa-briefcase text-success fa-3x flex-shrink-0 text-dark"></i>
+                                <div class="ms-4">
+                                    <h6 class="text-dark">Portafolio</h6>
+                                    <p class="mb-0 text-dark little-text">Un Portafolio completo de servicios para todas sus operaciones</p>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4">
+                            <div class="d-flex mb-5 wow fadeIn square" data-wow-delay="0.3s">
+                                <i class="fa fa-users text-success fa-3x flex-shrink-0 text-dark"></i>
+                                <div class="ms-4">
+                                    <h6 class="text-dark">Experiencia</h6>
+                                    <p class="mb-0 text-dark little-text">Más de 60 años de trabajo ininterrumpido en el Sector</p>
+                                </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-xl-3 col-lg-4">
+                            <div class="d-flex mb-5 wow fadeIn square" data-wow-delay="0.4s">
+                                <i class="fa fa-desktop text-success fa-3x flex-shrink-0 text-dark"></i>
+                                <div class="ms-4">
+                                    <h6 class="text-dark">Tecnología</h6>
+                                    <p class="mb-0 text-dark little-text">Nos conectamos a nuestros Clientes y ellos a nosotros</p>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-4">
+                            <div class="d-flex mb-5 wow fadeInUp square" data-wow-delay="0.5s">
+                                <i class="fa fa-concierge-bell text-success fa-3x flex-shrink-0 text-dark"></i>
+                                <div class="ms-4">
+                                    <h6 class="text-dark">Atención Personalizada</h6>
+                                    <p class="mb-0 text-dark little-text">Contacto directo y sin intermediarios</p>
+                                </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-xl-3 col-lg-4">
+                            <div class="d-flex mb-5 wow fadeIn square" data-wow-delay="0.6s">
+                                <i class="fa fa-lightbulb text-success fa-3x flex-shrink-0 text-dark"></i>
+                                <div class="ms-4">
+                                    <h6 class="text-dark">Innovación</h6>
+                                    <p class="mb-0 text-dark little-text">Buscaremos formas de ofrecerle el mejor precio-valor</p>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-lg-6">
+                            <div class="d-flex mb-5 wow fadeInUp square" data-wow-delay="0.7s">
+                                <i class="fa fa-check-square text-success fa-3x flex-shrink-0 text-dark"></i>
+                                <div class="ms-4">
+                                    <h6 class="text-dark">Soluciones</h6>
+                                    <p class="mb-0 text-dark little-text">Nuestro equipo le ofrecerá lo que usted busca</p>
+                                </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-xl-3 col-lg-6">
+                            <div class="d-flex mb-5 wow fadeIn square" data-wow-delay="0.8s">
+                                <i class="fa fa-money-bill-alt text-success fa-3x flex-shrink-0 text-dark dropshadow"></i>
+                                <div class="ms-4">
+                                    <h6 class="text-dark dropshadow">Precios atractivos</h6>
+                                    <p class="mb-0 text-dark little-text dropshadow">Nuestros precios son de los mejores del mercado</p>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    
+                    
+                    
+                </div>
+                
+                {% comment %} <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/feature.jpg' %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div> {% endcomment %}
+            </div>
+        </div>
+    </div>
+
+        <style>
+            .little-text{
+                font-size: 0.8rem;
+            }
+
+            .square {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #f8f9fa;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; 
+                
+              }
+        </style>
+        
+    <!-- Feature End -->
+    
+    <!-- Pricing Start -->
+    <div class="container-xxl py-5 ">
+        <div class="container py-5 ">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-5 dropshadow">Conoce más de nuestros procesos</h1>
+            </div>
+            <div class="row shadow-lg">
+                <div class="col-lg-6 bg-color-darkgreen margin-top-minus5 bg-warning " data-wow-delay="0.3s" style="padding: 3%;">
+                    <h3 class="text-white pb-3">Operador Logístico de carga</h3>
+                    <div class="ratio ratio-16x9" >
+                        <iframe class="" src="https://www.youtube.com/embed/x4_GdZ3PYvY?rel=0" style="width: 100%; height: 100%;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6 bg-color-darkgreen margin-top-minus5 bg-warning " data-wow-delay="0.3s" style="padding: 3%;">
+                    <h3 class="text-white pb-3">COVID 19</h3>
+                    <div class="ratio ratio-16x9" >
+                        <iframe class="" src="https://www.youtube.com/embed/yJR5dsfpK_8?rel=0" style="width: 100%; height: 100%;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing End -->
+
+    
+
+
+    <!-- Quote Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-5 ">Únete a nuestro Equipo: Forjando el Futuro de la Logística Global</h1>
+                    <p class="mb-5 ">En Grupo Giraud, estamos en constante búsqueda de mentes apasionadas y comprometidas para formar parte de nuestro equipo. Si tienes un espíritu innovador y estás listo para dejar tu huella en el mundo de la logística, te invitamos a unirte a nosotros en esta emocionante travesía.</p>
+                    <div class="d-flex align-items-center">
+                        <div class="ps-4">
+                            <a href="https://mail.google.com/mail/?view=cm&to=destinatario%40gmail.com&su=Asunto%20del%20Correo&body=Cuerpo%20del%20Correo" target="_blank" type="button" class="btn btn-success btn-lg py-3 top-0 end-0 mt-2 me-2 dropshadow">POSTULATE</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <img style="width: 100%;" class="object-fit-sm-contain shadow-lg" src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/13318/images/pSg6PfCLSo2lQBu7gMv2_office1280.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+    <!--certificados-->
+
+    <section id="scrollspyHeading3" class="padding-top-bottom8 text-center shadow-lg" >
+        <div class="container" style="padding-bottom: 3%;">
+            <div class="row nopadding">
+                <h2 class=" big2 mt-4 mb-4">Membresías y Certificaciones</h2>
+                <img src="{% static 'img/logos-cer.jpg' %}" alt="Logos de organizaciones de Comercio Exterior" class="respoimg" >
+            </div>
+        </div>
+        <section class="padding-top-bottom8 bg-color3 text-center" id="clientes">
+            <div class="container-fluid">
+                <div class="row nopadding">
+                    <h2 class="big2 font-weight8 line-height margin-bottom less2">Algunos de nuestros Clientes</h2>
+                    <p class="clearfix margin-bottom5"></p>
+                </div>
+            </div>
+            <div class="scrollmenu sticky-container">
+                <a href="#"><img src="{% static 'img/logo-cliente2.gif' %}" alt=""></a>
+                <a href="#"><img src="{% static 'img/logo-cliente3.gif' %}" alt=""></a>
+                <a href="#"><img src="{% static 'img/logo-cliente4.gif' %}" alt=""></a>
+                <a href="#"><img src="{% static 'img/logo-cliente6.gif' %}" alt=""></a>
+                <a href="#"><img src="{% static 'img/logo-cliente7.gif' %}" alt=""></a>
+                <a href="#"><img src="{% static 'img/logo-cliente8.gif' %}" alt=""></a>
+                <a href="#"><img src="{% static 'img/logo-cliente9.gif' %}" alt=""></a>
+                <a href="#"><img src="{% static 'img/logo-cliente10.gif' %}" alt=""></a>
+                <a href="#"><img src="{% static 'img/logo-cliente11.gif' %}" alt=""></a>
+            </div>
+
+        </section>
+    </section>
+
+    <style>
+        
+        div.scrollmenu {
+        background-color: #ffffff;
+        overflow: auto;
+        white-space: nowrap;
+        }
+        
+        div.scrollmenu a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        }
+        
+        div.scrollmenu a:hover {
+        background-color: #777;
+        }
+        /* Media query para mantener proporción de imágenes en tamaños de pantalla pequeños */
+        @media (max-width: 425px) {
+            div.scrollmenu a {
+            height: 40%;
+            max-width: auto;
+            }
+        }
+        
+        /* Media query para mantener proporción de imágenes en tamaños de pantalla pequeños */
+        @media (min-width: 426px) and (max-width: 768px) {
+            div.scrollmenu a {
+            height: 60%;
+            max-width: auto;
+            }
+        }
+        
+        /* Media query para mantener proporción de imágenes en tamaños de pantalla medianos */
+        @media (min-width: 769px) and (max-width: 1200px) {
+            div.scrollmenu a {
+            height: 80%;
+            max-width: auto;
+            }
+        }
+        
+        /* Media query para mantener proporción de imágenes en tamaños de pantalla grandes */
+        @media (min-width: 1201px) {
+            div.scrollmenu a {
+            height: 100%;
+            max-width: auto;
+            }
+        }
+        div.scrollmenu a img{
+            width: 100px;
+            }
+
+
+        /* Media query para mantener proporción de imágenes en tamaños de pantalla pequeños */
+        @media (max-width: 425px) {
+            div.scrollmenu a img{
+            width: 100px;
+            }
+        }
+        
+        /* Media query para mantener proporción de imágenes en tamaños de pantalla pequeños */
+        @media (min-width: 426px) and (max-width: 768px) {
+            div.scrollmenu a img{
+                width: 200px;
+            }
+        }
+        
+        /* Media query para mantener proporción de imágenes en tamaños de pantalla medianos */
+        @media (min-width: 769px) and (max-width: 1200px) {
+            div.scrollmenu a img{
+                width: 300px;
+            }
+        }
+        
+        /* Media query para mantener proporción de imágenes en tamaños de pantalla grandes */
+        @media (min-width: 1201px) {
+            div.scrollmenu a img{
+                width: 400px;
+            }
+        }
+
+    
+        
+    </style>
+
+    <!-- Contact Start -->
+    <div id="scrollspyHeading4" class="container overflow-hidden py-5 px-lg-0">
+        <div class="container contact-page py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-md-6 contact-form wow fadeIn " data-wow-delay="0.1s">
+                     <div class="bg-light p-4 shadow-lg">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div class="row g-3 ">
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="name" placeholder="Your Name">
+                                        <label for="name">Nombre</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="" placeholder="Your Name">
+                                        <label for="name">Empresa</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" name="email" placeholder="Your Email">
+                                        <label for="email">Correo</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="phone" placeholder="Subject">
+                                        <label for="subject">Telefono</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="subject" placeholder="Subject">
+                                        <label for="subject">Asunto</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" name="message" style="height: 100px"></textarea>
+                                        <label for="message">Mensaje</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <button class="btn btn-success w-100 py-3" type="submit">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s">
+                    <div class="position-relative h-100">
+                        <h6 class="text-secondary text-uppercase">Ponte en contacto</h6>
+                    <h1 class="mb-4">Nuestro personal estará encantado en atender sus requerimientos. Solo complete el siguiente formulario y entraremos en contacto con usted.
+                    </h1>
+                    <h5 class="white font-weight4 line-height4 margin-bottom3">
+                        <i class="fa fa-map-marker fa-lg"></i>&nbsp; Calle Real de Montesano, Almacén No. 1, Maiquetía, Edo. Vargas, Venezuela.<br>
+                        <i class="fa fa-phone"></i>&nbsp; Teléfono local: (0212) 655.06.00<br>
+                        <i class="fa fa-phone"></i>&nbsp; Internacional: +58 212 655.06.00<br>
+         
+                        <a href="mailto:info@grupogiraud.com" class="white text-warning"><i class="fa fa-envelope text-warning"></i>&nbsp; info@grupogiraud.com</a><br>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    
+
+    <!-- Ubicacion -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0 bg-warning shadow-lg">
+        <div class="container  py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-md-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s">
+                    <h1 class="text-white">La Guaira</h1>
+                    <div class="position-relative ratio ratio-1x1">
+                        <iframe class=" w-100 h-100 " style="object-fit: cover;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.7718909266914!2d-66.97759428520082!3d10.59699969244342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5d6d57a54b5f%3A0xdb7c38543704c43b!2sGrupo+Giraud!5e0!3m2!1ses-419!2s!4v1490556604595"
+                        frameborder="0" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s">
+                    <h1 class="text-white">Caracas</h1>
+                    <div class="position-relative ratio ratio-1x1">
+                        <iframe class=" w-100 h-100 " style="object-fit: cover;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.048126166039!2d-66.82368348520181!3d10.496872492511589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDI5JzQ4LjciTiA2NsKwNDknMTcuNCJX!5e0!3m2!1ses!2sve!4v1589513995731!5m2!1ses!2sve"
+                        frameborder="0" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ubicacion -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Direccion</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Calle Real de Montesano, Edo. Vargas, Venezuela</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+58 212 655.06.00</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@grupogiraud.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="http://twitter.com/grupogiraud"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/grupogiraudweb/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="http://instagram.com/grupogiraud"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="mailto:info@grupogiraud.com"><i class="fab fa-email"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Servicios</h4>
+                    <a id="scrollspyHeading2" class="btn btn-link" href="">Agentes de Aduana
+                    </a>
+                    <a id="scrollspyHeading2" class="btn btn-link" href="">Agentes de Carga
+                    </a>
+                    <a id="scrollspyHeading2" class="btn btn-link" href="">Almacenes y Depósitos
+                    </a>
+                    <a id="scrollspyHeading2" class="btn btn-link" href="">Transporte Terrestre
+                    </a>
+                    <a id="scrollspyHeading2" class="btn btn-link" href="">Seguros de Carga
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Enlaces</h4>
+                    <a class="btn btn-link" href="#scrollspyHeading1">Conocenos</a>
+                    <a class="btn btn-link" href="#scrollspyHeading4">Contacto</a>
+                    <a class="btn btn-link" href="#scrollspyHeading2">Servicios</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Suscríbase a nuestra Newsletter</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Tu email">
+                        <button type="button" class="btn btn-success py-2 position-absolute top-0 end-0 mt-2 me-2">Ingresa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Grupo Giraud</a>, Todos los derechos reservados.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Diseñado por <a class="border-bottom" href="#">Jorge Medina</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-success btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        /**
+* By Alvaro Trigo 
+* Follow me on Twitter: https://twitter.com/imac2
+*/
+(function(){
+    init();
+
+    var g_containerInViewport;
+    function init(){
+        setStickyContainersSize();
+        bindEvents();
+    }
+
+    function bindEvents(){
+        window.addEventListener("wheel", wheelHandler);        
+    }
+
+    function setStickyContainersSize(){
+        document.querySelectorAll('.sticky-container').forEach(function(container){
+            const stikyContainerHeight = container.querySelector('main').scrollWidth;
+            container.setAttribute('style', 'height: ' + stikyContainerHeight + 'px');
+        });
+    }
+
+    function isElementInViewport (el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
+    }
+
+    function wheelHandler(evt){
+        
+        const containerInViewPort = Array.from(document.querySelectorAll('.sticky-container')).filter(function(container){
+            return isElementInViewport(container);
+        })[0];
+
+        if(!containerInViewPort){
+            return;
+        }
+
+        var isPlaceHolderBelowTop = containerInViewPort.offsetTop < document.documentElement.scrollTop;
+        var isPlaceHolderBelowBottom = containerInViewPort.offsetTop + containerInViewPort.offsetHeight > document.documentElement.scrollTop;
+        let g_canScrollHorizontally = isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+
+        if(g_canScrollHorizontally){
+            containerInViewPort.querySelector('main').scrollLeft += evt.deltaY;
+        }
+    }
+})();
+    </script>
+</body>
+
+</html>
