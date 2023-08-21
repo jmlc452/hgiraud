@@ -20,3 +20,6 @@ def index(request):
         server.quit()
         return redirect("inicio")
     return render(request,'index.html')
+
+def ingresar(request):
+    return render(request,'ingresar.html')
